@@ -3,21 +3,21 @@ import './Hello.css';
 
 export interface Props {
   name: string;
-  enthrusiasmLevel?: number;
+  enthusiasmLevel?: number;
   onIncrement?: () => void;
   onDecrement?: () => void;
 }
 
-function Hello({name, enthrusiasmLevel = 3, onIncrement, onDecrement}: Props) {
-  if (enthrusiasmLevel <= 0) {
+function Hello({name, enthusiasmLevel = 3, onIncrement, onDecrement}: Props) {
+  if (enthusiasmLevel <= 0) {
     throw new Error('You could be a little more enthusiastic. :D')
   }
   return (
     <div className='hello'>
       <div className='greeting'>
-        Hello {name + getExclamationMarks(enthrusiasmLevel)}
+        Hello {name + getExclamationMarks(enthusiasmLevel)}
       </div>
-      <p>enthrusiasmLevel = {enthrusiasmLevel}</p>
+      <p>enthrusiasmLevel = {enthusiasmLevel}</p>
       <div>
         <button onClick={onDecrement}>-</button>
         <button onClick={onIncrement}>+</button>
